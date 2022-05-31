@@ -1,0 +1,19 @@
+{
+  "name": "lreu0177-deco2017-studbud",
+  "version": "1.0.0",
+  "description": "Study Website",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lailareuven/lreu0177-DECO2017-STUDBUD.git"
+  },
+  "author": "Laila Reuven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lailareuven/lreu0177-DECO2017-STUDBUD/issues"
+  },
+  "homepage": "https://github.com/lailareuven/lreu0177-DECO2017-STUDBUD#readme"
+}
