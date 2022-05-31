@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lailareuven/lreu0177-DECO2017-STUDBUD/issues"
   },
-  "homepage": "https://github.com/lailareuven/lreu0177-DECO2017-STUDBUD#readme"
+  "homepage": "https://github.com/lailareuven/lreu0177-DECO2017-STUDBUD#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
