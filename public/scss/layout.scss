@@ -1,0 +1,150 @@
+
+/*------ flexbox structure https://css-tricks.com/snippets/css/a-guide-to-flexbox/ ------*/
+
+.wrapperb {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .wrapperb > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+  
+  .header {
+    background-color: #B0BD92;
+  }
+  
+  .footer {
+    background-color:#779971;
+  }
+
+  .main {
+    text-align: center;
+    background-color: #B0BD92;
+  }
+  
+  .bodytext {
+  background-color: #B0BD92;
+  }
+  
+  /* ---------- INTRO ------------ */
+  
+        .intro {
+          background-color: mediumpurple;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+  
+  /* ---------- MAIN 1 ------------ */
+  
+        // .welcome {
+        //   background-color: #B0BD92;
+        // /*   flex-direction: row; */
+        //   width: 45%;
+        //   text-align:left;
+        //   padding: 20px;
+        // }
+  
+        // .separator {
+        // background-color: #B0BD92;
+        //   width: 10%;
+        // }
+  
+  /* ---------- STOPWATCH CSS LAYOUT ------------ */
+
+        .stopwatchContainer {
+        background-color: #B0BD92;
+        /*   flex-direction: row;
+          flex: 0 0 20vw; */
+          width: 45%;
+          min-height: 250px;
+          height: 100%;
+        }
+  
+  /* ---------- TASKLIST CSS LAYOUT ------------ */
+  
+        .tasks {
+          background-color: #B0BD92;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          
+        }
+  
+  /* ----------MAIN 4------------ */
+  
+        .reading {
+          background-color: #B0BD92;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        /*   flex-direction: row; */
+          // width: 45%;
+        }
+  
+        // .separator {
+        // background-color: #B0BD92;
+        //   width: 10%;
+        // }
+  
+        .pomodoro {
+        background-color: #B0BD92;
+        flex: 1;
+          display: flex;
+          flex-direction: column;
+        /*   flex-direction: row;
+          flex: 0 0 20vw; */
+          // width: 45%;
+        }
+  
+  /* ----------KANBAN BOARD------------ */
+  
+  .kanbanbox {
+          background-color: #B0BD92;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          // padding-left: 400px;
+          // padding-right: 400px;
+        }
+
+  
+  main {
+    display: flex;
+      min-height: calc(100vh - 40vh);
+  }
+  
+  section {
+    min-height: calc(100vh - 40vh);
+  }
+  
+  header, footer, article, nav, aside {
+      padding: 1em;
+    }
+  
+  body {
+    padding: 2em; 
+  }
+  
+  
+  /* -------- Responsive Design ---------- */
+  
+  @media screen and (max-width: 560px) {
+    body {
+      padding: 0;
+    }
+  
+    .banner {
+      padding: 10px;
+    }
+  
+    p {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  
+  }
