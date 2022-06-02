@@ -98,7 +98,7 @@ function addTask(taskDescription, dueDate, estimatedTime, priorityRating, comple
     renderTask(task);
 }
 
-// add rest of information here so that it shows up
+
 // Function to display task on screen
 function renderTask(task) {
 
@@ -109,6 +109,40 @@ function renderTask(task) {
     let item = document.createElement("li");
     item.setAttribute('data-id', task.id);
     item.innerHTML = "<p>" + task.taskDescription + "</p>";
+   
+    tasklist.appendChild(item); 
+
+    // Extra Task DOM elements
+    let delButton = document.createElement("button");
+    let delButtonText = document.createTextNode("Delete Task");
+    delButton.appendChild(delButtonText);
+    item.appendChild(delButton);
+
+
+    // Event Listeners for DOM elements
+    delButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        let id = event.target.parentElement.getAttribute('data-id');
+        let index = taskListArray.findIndex(task => task.id === Number(id));
+        removeItemFromArray(taskListArray, index)
+        console.log(taskListArray);
+        updateEmpty();
+        item.remove();
+    })
+
+    // Clear the input form
+    form.reset();
+}
+
+function renderTask(task) {
+
+    // Call function - checks if a task has been added
+    updateEmpty();
+
+    // Create HTML elements
+    let item = document.createElement("li");
+    item.setAttribute('data-id', task.id); 
+    item.innerHTML = "<p>" + "<span style='color:#123A0F'>Task: </span>" + task.taskDescription + "<br>" + "<span style='color:#123A0F'>Due Date: </span>" + task.dueDate + "<br>" + "<span style='color:#123A0F'>Completion Time: </span>" + task.completionTime + "<br>" + "<span style='color:#123A0F'>Estimated Completion Time: </span>" + task.estimatedTime + "<br>" + "<span style='color:#123A0F'>Priority Rating: </span>" + task.priorityRating + "</p>";
 
    
     tasklist.appendChild(item); 
@@ -339,7 +373,7 @@ let clearAll = () =>{
 
 }
 
-//fuction to show the starting and ending time 
+//function to show the starting and ending time 
 let sessionTime = () =>{
     return `Session was started at ${currentTime} and ended at ${EndTime}`
 }
