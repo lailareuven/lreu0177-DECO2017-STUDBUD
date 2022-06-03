@@ -1,3 +1,5 @@
+// REFERENCE: dcode. (2021). How to Build a Kanban Board with JavaScript (No Frameworks) [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=ijQ6dCughW8.
+
 import KanbanAPI from "../api/KanbanAPI.js";
 import DropZone from "./DropZone.js";
 import Item from "./Item.js";
@@ -51,23 +53,3 @@ export default class Column {
 	}
 }
 
-
-
-
-
-// document.getElementById("addBtn").addEventListener("click", () => {
-// 	const newColumn = KanbanAPI.insertColumn(id, "");
-
-// 	this.renderItem(newColumn);
-// });
-
-// KanbanAPI.getColumns(id).forEach(column => {
-// 	this.renderColumn(column);
-// });
-
-
-// renderColumn(data) {
-// 	const column = new Column(data.id, data.content);
-
-// 	this.elements.columns.appendChild(item.elements.root);
-// }

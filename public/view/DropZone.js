@@ -1,4 +1,4 @@
-// reference: https://www.youtube.com/watch?v=ijQ6dCughW8 
+// REFERENCE: dcode. (2021). How to Build a Kanban Board with JavaScript (No Frameworks) [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=ijQ6dCughW8.
 // area where user can drop an item - makes it clearer to the user what the result of their actions will be
 // this follows Nielsen's heuristic of Visibility of System Status which encourages keeping users informed about their interactions and what their next steps will be https://www.nngroup.com/articles/ten-usability-heuristics/
 

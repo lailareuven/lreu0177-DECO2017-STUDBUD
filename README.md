@@ -3,7 +3,7 @@
 
 ## Relevance to Design Brief
 
-In response to the design brief of designing and developing a study app website that helps students to better manage their studying by focusing on improving task, time and content management, I created StudBud. This site incorporates features that directly respond to each of these user needs in a way that suits my specific target audience, undergraduate university students aged 17-25 years old. 
+In response to the design brief of creating a website that helps students to better manage their studying by focusing on improving task, time and content management, I developed StudBud. This site incorporates features that directly respond to each of these user needs in a way that suits my specific target audience, undergraduate university students aged 17-25 years old. 
 
 In assignment two, I conducted a thorough user research process with this group that led to these key insights: 
 
@@ -23,9 +23,9 @@ These insights informed 3 user personas that would greatly benefit me in keeping
 
 In order to address the unique needs and requirements of these personas and thus my target audience as a whole, I wanted StudBud to be efficient, intuitive and effortless throughout the whole experience. This is why I chose to make my features as simple as possible and use colour, text and alerts to help users navigate the site with ease. These choices can be seen in more detail below in the Iteration and Improvement section. 
 
-I chose to keep the same colour scheme from my mockups as users responded well to these colours and theme during testing. They felt that it gave a "calming vibe" and "would help me to focus better". This is corroborated by Dr. Kate Lee's research study which proved green to be the best colour for long-term concentration and improving efficiency and focus. Colour theory also suggests that orange, when used in small amounts, is also provent to lift the mood and improve neural functioning. 
+I chose to keep the same colour scheme from my mockups as users responded well to these colours and overall theme during testing. They felt that it gave a "calming vibe" and "would help me to focus better". This is corroborated by Dr. Kate Lee's research study which proved green to be the best colour for long-term concentration and improving efficiency and focus. Colour theory also suggests that orange, when used in small amounts, is also proven to lift the mood and improve neural functioning. 
 
-The site's single-page design was chosen to also help with make the site easier to navigate and use. Since it is such a simplistic design, with minimal features - as requested by users - I felt that this choice would be best suited in this context. This decision was also informed by secondary research (Justinmind, 2018) I conducted on the benefits of single page vs multi-page websites as well as asking users for their thoughts. A single-page website allows the user to intuitively scroll, as university students do with most of the apps they use, and to provide easy navigation and an inability to get 'lost'. It is also great for this type of site that contains features that could be used in tandem. This prevents users from needing to keep switching to different tabs or pages of the sites and can easily multitask, for example edit their Kanban board while also keeping an eye on the stopwatch timer.
+The site's single-page design was chosen to also help make the site easier to navigate and use. Since it is such a simplistic design, with minimal features - as requested by users - I felt that this choice would be best suited in this context. This decision was also informed by secondary research I conducted on the benefits of single page vs multi-page websites as well as asking users for their thoughts. A single-page website allows the user to intuitively scroll, as university students do with most of the apps they use, and to provide easy navigation and an inability to get 'lost'. It is also great for this type of site that contains features that could be used in tandem. This prevents users from needing to keep switching to different tabs or pages of the sites and can easily multitask, for example edit their Kanban board while also keeping an eye on the stopwatch timer. (Justinmind, 2018)
 
 
 ## Iteration and Improvement
@@ -47,7 +47,7 @@ During the next round of testing, I recieved great feedback on this new layout w
 
 ### Stopwatch
 
-The image below is the stopwatch I presented in my mockups in assignment two. After the first session of testing with users, a few of them seemed to get confused between the stop icon and reset icon and kept choosing the wrong one. Users exclaimed "the reset icon in my mind is more of the stop button, as I always think a cross like that would be stop" and "I feel like the two lines are a pause button, but I have no idea what the X would do?". To confirm this as a key issue I looked at literature discussing design principles regarding icons and buttons and found that "icons are (often) hard to memorize and are often highly inefficient" (https://uxmyths.com/post/715009009/myth-icons-enhance-usability). This prompted me to change these icons into text buttons to improve recognition and make the experience of using this feature a lot quicker. 
+The image below is the stopwatch I presented in my mockups in assignment two. After the first session of testing with users, a few of them seemed to get confused between the stop icon and reset icon and kept choosing the wrong one. Users exclaimed "the reset icon in my mind is more of the stop button, as I always think a cross like that would be stop" and "I feel like the two lines are a pause button, but I have no idea what the X would do?". To confirm this as a key issue I looked at literature discussing design principles regarding icons and buttons and found that "icons are hard to memorize and are often highly inefficient" (https://uxmyths.com/post/715009009/myth-icons-enhance-usability). This prompted me to change these icons into text buttons to improve recognition and make the experience of using this feature a lot quicker. 
 
 <img src="README-imgs/mockup-stopwatch.png" alt="drawing" width="300"/>
 
@@ -66,7 +66,7 @@ For the third round of testing I changed the colours of the buttons (as seen bel
 
 Following Rob's tutorial on developing a task list creator, I adapted it to fit my own design below, as well as making sure it rendered more than just the task, but all other inputs too. 
 
-This feature was great in assisting users when using this feature and helping to guide them as to where they should start. This adheres to the heuristic of Visibility of the System Status as it "communicate(s) clearly to users what the system’s state is" (https://www.nngroup.com/articles/ten-usability-heuristics/).
+This feature in the image below, of the "please fill in this field" was great in assisting users when utilising this feature and helping to guide them as to where they should start. This adheres to the heuristic of Visibility of the System Status as it "communicate(s) clearly to users what the system’s state is" (https://www.nngroup.com/articles/ten-usability-heuristics/).
 <img src="README-imgs/task-message.png" alt="drawing" width="200"/>
 
 After showing the initial task list below to users to test with, the number one response I recieved was that the headings on the right blended in too much with the background and were too similar to the text beside it. Design principles also require colour contrast to be checked for accessibility purposes and I realised that the dark green colour chosen here was not meeting guidelines (https://xd.adobe.com/ideas/principles/web-design/color-contrast-considerations-accessibility-design/). 
@@ -88,7 +88,7 @@ For my original mockup design (seen below) I chose to go with a simple layout us
 
 Responding to this feedback I ensured that the new kanban board would contain smaller boxes for assignments and be stacked on top of eachother to make it easier to read at a glance. Users responded well to these changes. I also followed the similar insight recieved during testing with the stopwatch timer and changed the add button from an icon to a clear text button below the board and under each column. 
 
-In the second round of testing, I realised that some users were getting confused with the titles as they all sounded and looked too similar, 'to do', 'doing', 'done' - especially when in a rush to complete the task. I chose to use the new words seen below as I felt these would better represent each column, be more professional and of course easier to understand. Another discovery made during this session was that some participants found it difficult to move an item to a new column as they weren't placing it in the right spot and hence it would bounce back to it's original column. 
+In the second round of testing, I realised that some users were getting confused with the titles as they all sounded and looked too similar, 'to do', 'doing', 'done' - especially when in a rush to complete the task. I chose to use the new words seen below as I felt these would better represent each column, be more professional and of course easier to understand. Another discovery made during this session was that some participants found it difficult to move an item to a new column as they weren't placing it in the right spot and hence it would bounce back to it's original column. To address this pain point I implemented a 'drop-zone' capability.
 
 <img src="README-imgs/final-kanban.png" alt="drawing" width="550"/>
 
@@ -96,7 +96,7 @@ The third round of testing found that users liked the ability to drag and drop i
 
 <img src="README-imgs/dropzone-kanban.png" alt="drawing" width="550"/>
 
-Lastly, the 'think-aloud' method led me to register that participants either didn't know how to delete or were deleting items by accident. To fix this I looked at design theory to find ways to fix this problem. I decided to put a piece of text that described to users exactly how to use the Kanban Board and especially how to delete (https://blog.tubikstudio.com/user-experience-tips-ux-writing/). 
+Lastly, the 'think-aloud' method led me to register that participants either didn't know how to delete or were deleting items by accident. To fix this I first looked at design theory to see how these issues were commonly solved. I decided to put a piece of text that described to users exactly how to use the Kanban Board and especially how to delete (https://blog.tubikstudio.com/user-experience-tips-ux-writing/). 
 
 <img src="README-imgs/delete2-kanban.png" alt="drawing" width="400"/>
 
@@ -108,7 +108,7 @@ To prevent users from mistakenly deleting an item I followed Nielsen's heuristic
 
 ### Dictionary Lookup
 
-Although in my mockups I had originally proposed a reading list creator, after speaking to users in the inital testing stage, we came to the conclusion that they would use a dictionary lookup more often and that this feature would be useful. They felt that they could already visit Canvas (or equivalent) and easily view readings by week there and didn't see the purpose of having this again on StudBud. Upon self-reflection I agreed with this feedback and as a university student myself I know that I do always use google as a dictionary lookup as I don't currently have a better solution, however this way is no where near efficient or effective and often results in me having a thousand tabs open that are impossible to find after. 
+Although in my mockups I had originally proposed a reading list creator, after speaking to users in the inital testing stage, we came to the conclusion that they would use a dictionary lookup more often and that this feature would be extremely useful. They felt that they could already visit Canvas (or equivalent) and easily view readings by week there and didn't see the purpose of having this again on StudBud. Upon self-reflection I agreed with this feedback and as a university student myself I know that I do always use google as a dictionary lookup as I don't currently have a better solution, however this way is no where near efficient or effective and often results in me having a thousand tabs open that are impossible to find after. 
 
 <img src="README-imgs/reading-list.png" alt="drawing" width="200"/>
 
@@ -117,6 +117,9 @@ In response to this helpful feedback I switched the reading list creator for the
 After the second round of testing, users reaffirmed their previous thoughts and exclaimed how much they liked this new feature. However, they felt that it could be improved by adding the ability to see pronunciation and an example of the word in order to help them better understand how they can use it and how they should say it, for presentations or video voice-overs. I implemented these aspects into the feature which recieved a stellar response from users in the third round of testing. 
 
 Since I hadn't created a mockup of this feature I decided to follow the style of other features on the site to maintain consistency and the aesthetic. 
+
+
+<img src="README-imgs/dictionary-mockup.png" alt="drawing" width="500"/>
 
 
 ### Pomodoro Timer
@@ -155,11 +158,18 @@ Spotify is the most popular music streaming platform amongst my target user grou
 There were some inquiries into those users that do not have a spotify account, but not to worry! This embedded player has a default playlist set, that anyone can listen to when using the site. I chose this study playlist, as it is the one presented in my mockups and suits the theme of the site. 
 
 
+## REFERENCES
 
-#### Reflection
+# Coding Tutorials 
 
+Plantpot. (2022). StopWatch with HTML, CSS & JavaScript [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=MF5HZ8058CM.
 
+Rob's Interactive Tasklist and Tasklist Improvements tutorials https://sydney.instructuremedia.com/lti-app/embed/perspective/6jZLUBigFRNkoH_BZUAR-Q https://sydney.instructuremedia.com/lti-app/embed/perspective/r-Q0ZpyggfbdqCN53ruvwg 
 
+dcode. (2021). How to Build a Kanban Board with JavaScript (No Frameworks) [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=ijQ6dCughW8.
 
+CodingNepal. (2021). Build A Dictionary App in HTML CSS & JavaScript [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=uqgCF3JIHkA.
+
+Hassan, F. (2021). Build a Pomodoro timer using JavaScript. DEV Community. Retrieved 2 June 2022, from https://dev.to/fahadhassan1213/build-a-pomodoro-timer-using-javascript-3d13 and https://github.com/fahadhassan1213/Pomodoro-Timer 
 
 NOTE: I apologise, I had to restart my github as I ran into issues with git.ignore in my old one and could not fix it no matter how hard I tried- hence why the dates of commits are recent and commits are separate files i moved over from my old repository 

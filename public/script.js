@@ -1,9 +1,11 @@
-// STOPWATCH JS --------------------------
+// STOPWATCH JS ------------------------------
+//Followed coding tutorial: Plantpot. (2022). StopWatch with HTML, CSS & JavaScript [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=MF5HZ8058CM.
 
 let hr = min = sec = ms = 0;
 let t;
 let startBtn = document.querySelector(".start");
 
+// counting function
 function countUp() {
   ms++;
 
@@ -22,21 +24,26 @@ function countUp() {
   displayTimer();
 }
 
+// timer function 
 function displayTimer() {
   document.querySelector(".hours").innerHTML = ("0" + hr).slice(-2);
   document.querySelector(".minutes").innerHTML = ("0" + min).slice(-2);
   document.querySelector(".seconds").innerHTML = ("0" + sec).slice(-2);
-//   document.querySelector(".milliseconds").innerHTML = ("0" + ms).slice(-2);
 }
 
+// start function
 function startTimer() {
   startBtn.disabled = true;
   t = setInterval(countUp, 10);
 }
+
+// stop function
 function stopTimer() {
   clearInterval(t);
   startBtn.disabled = false;
 }
+
+// reset function
 function resetTimer() {
   clearInterval(t);
   hr = min = sec = ms = 0;
@@ -47,6 +54,7 @@ function resetTimer() {
 
 
 // TASKLIST JS --------------------------
+// Followed Rob's Interactive Tasklist and Tasklist Improvements tutorials https://sydney.instructuremedia.com/lti-app/embed/perspective/6jZLUBigFRNkoH_BZUAR-Q https://sydney.instructuremedia.com/lti-app/embed/perspective/r-Q0ZpyggfbdqCN53ruvwg 
 
 // Basic form DOM elements
 const form = document.getElementById("taskform");
@@ -188,7 +196,98 @@ function updateEmpty() {
 }
 
 
-// POMODORO JS --------------------------
+// DICTIONARY JS ---------------------------------- followed coding tutorial: CodingNepal. (2021). Build A Dictionary App in HTML CSS & JavaScript [Video]. Retrieved 2 June 2022, from https://www.youtube.com/watch?v=uqgCF3JIHkA.
+
+const wrapper = document.querySelector(".wrapper"),
+searchInput = wrapper.querySelector("input"),
+volume = wrapper.querySelector(".word i"),
+infoText = wrapper.querySelector(".info-text"),
+synonyms = wrapper.querySelector(".synonyms .list"),
+removeIcon = wrapper.querySelector(".search span");
+let audio;
+
+// data function
+function data(result, word){
+    if(result.title){ // if api returns the message of can't find word - help users understand what the error is in more detail 
+        infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word.`;
+    }else{
+        // if word is found
+        wrapper.classList.add("active");
+        let definitions = result[0].meanings[0].definitions[0],
+        phontetics = `${result[0].meanings[0].partOfSpeech}  /${result[0].phonetics[0].text}/`;
+
+        // pass the particular response data to a particular html element
+        document.querySelector(".word p").innerText = result[0].word;
+        document.querySelector(".word span").innerText = phontetics;
+        document.querySelector(".meaning span").innerText = definitions.definition;
+        document.querySelector(".example span").innerText = definitions.example;
+        // audio feature to help the user hear how the word is pronounced - good for presentations and preparing for voice overs
+        audio = new Audio("https:" + result[0].phonetics[0].audio);
+
+        // if there are no synonyms for this word - this feature won't show up - better for the user than having an empty box/ undefined 
+        if(definitions.synonyms[0] == undefined){
+            synonyms.parentElement.style.display = "none";
+        }else{
+            synonyms.parentElement.style.display = "block";
+            synonyms.innerHTML = "";
+            for (let i = 0; i < 5; i++) { // getting only 5 synonyms out of many
+                let tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[i]},</span>`;
+                tag = i == 4 ? tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[4]}</span>` : tag;
+                synonyms.insertAdjacentHTML("beforeend", tag); // passing all 5 synonyms inside synonym 
+                // NOTE: due to the use of free dictionary api, some words do not have synonyms in this dictionary - please input the word 'pleasure' to view the synonyms function
+            }
+        }
+    }
+}
+
+// user searches for a word 
+function search(word){
+    fetchApi(word);
+    searchInput.value = word;
+}
+
+// fetch api function - free dictionary api https://dictionaryapi.dev/
+function fetchApi(word){
+    wrapper.classList.remove("active");
+    infoText.style.color = "#000";
+    infoText.innerHTML = `Searching the meaning of <span>"${word}"</span>`;
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    // fetching api response and returning it with parsing into js object and then in another
+    // method calling data function with passing api response and searched word as an argument
+    fetch(url).then(response => response.json()).then(result => data(result, word)).catch(() =>{
+        infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word.`;
+    });
+}
+
+// When the user types in a word
+searchInput.addEventListener("keyup", e =>{
+    let word = e.target.value.replace(/\s+/g, ' ');
+    if(e.key == "Enter" && word){
+        fetchApi(word);
+    }
+});
+
+
+volume.addEventListener("click", ()=>{
+    volume.style.color = "#4D59FB";
+    audio.play();
+    setTimeout(() =>{
+        volume.style.color = "#999";
+    }, 800);
+});
+
+removeIcon.addEventListener("click", ()=>{
+    searchInput.value = "";
+    searchInput.focus();
+    wrapper.classList.remove("active");
+    infoText.style.color = "#9A9A9A";
+    infoText.innerHTML = "Type any existing word and press enter to get meaning, example, synonyms, etc.";
+});
+
+
+
+
+// POMODORO JS -------------------------- followed coding tutorial: Hassan, F. (2021). Build a Pomodoro timer using JavaScript. DEV Community. Retrieved 2 June 2022, from https://dev.to/fahadhassan1213/build-a-pomodoro-timer-using-javascript-3d13 and https://github.com/fahadhassan1213/Pomodoro-Timer 
 
 const descForm = document.querySelector('.desc-form')
 const myBtns = document.querySelector('.my-btns');
@@ -236,7 +335,7 @@ let width = 0;
 
 
 
-
+// buttons and their actions
 myBtns.addEventListener('click',(e)=>{
     if(e.target.classList.contains('start')){
         if(workDuration !== '0' && workDuration !==''){
@@ -296,7 +395,7 @@ myBtns.addEventListener('click',(e)=>{
 
 
 
-//function, which is for showing the remaining time to user
+//function that shows the remaining time to user
 let timeReamaining = () =>{
     seconds = seconds - 1;
     if(seconds === 0){
@@ -317,7 +416,8 @@ let timeReamaining = () =>{
     }
         seconds = 59;
     }
-//Here we are rendring the change in time on the timer screen       
+
+//Here we are rendering the change in time on the timer screen       
 let html = `${workMinutes<10? `0${workMinutes}`:workMinutes}:${seconds<10? `0${seconds}`:seconds}`
 remTime.innerText = html;  
 }
@@ -338,7 +438,7 @@ let increaseProgress = () =>{
     
 }
 
-//fucntion to start time intervals
+//function to start time intervals
 let myIntervals = () =>{
     timer1 = setInterval(timeReamaining,1000);
     timer2 = setInterval(increaseProgress,timeRatio_of_progress)
@@ -379,81 +479,6 @@ let sessionTime = () =>{
 }
 
 
-
-// DICTIONARY JS ----------------------------------
-
-const wrapper = document.querySelector(".wrapper"),
-searchInput = wrapper.querySelector("input"),
-volume = wrapper.querySelector(".word i"),
-infoText = wrapper.querySelector(".info-text"),
-synonyms = wrapper.querySelector(".synonyms .list"),
-removeIcon = wrapper.querySelector(".search span");
-let audio;
-
-function data(result, word){
-    if(result.title){
-        infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word.`;
-    }else{
-        wrapper.classList.add("active");
-        let definitions = result[0].meanings[0].definitions[0],
-        phontetics = `${result[0].meanings[0].partOfSpeech}  /${result[0].phonetics[0].text}/`;
-        document.querySelector(".word p").innerText = result[0].word;
-        document.querySelector(".word span").innerText = phontetics;
-        document.querySelector(".meaning span").innerText = definitions.definition;
-        document.querySelector(".example span").innerText = definitions.example;
-        audio = new Audio("https:" + result[0].phonetics[0].audio);
-
-        if(definitions.synonyms[0] == undefined){
-            synonyms.parentElement.style.display = "none";
-        }else{
-            synonyms.parentElement.style.display = "block";
-            synonyms.innerHTML = "";
-            for (let i = 0; i < 5; i++) {
-                let tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[i]},</span>`;
-                tag = i == 4 ? tag = `<span onclick="search('${definitions.synonyms[i]}')">${definitions.synonyms[4]}</span>` : tag;
-                synonyms.insertAdjacentHTML("beforeend", tag);
-            }
-        }
-    }
-}
-
-function search(word){
-    fetchApi(word);
-    searchInput.value = word;
-}
-
-function fetchApi(word){
-    wrapper.classList.remove("active");
-    infoText.style.color = "#000";
-    infoText.innerHTML = `Searching the meaning of <span>"${word}"</span>`;
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    fetch(url).then(response => response.json()).then(result => data(result, word)).catch(() =>{
-        infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word.`;
-    });
-}
-
-searchInput.addEventListener("keyup", e =>{
-    let word = e.target.value.replace(/\s+/g, ' ');
-    if(e.key == "Enter" && word){
-        fetchApi(word);
-    }
-});
-
-volume.addEventListener("click", ()=>{
-    volume.style.color = "#4D59FB";
-    audio.play();
-    setTimeout(() =>{
-        volume.style.color = "#999";
-    }, 800);
-});
-
-removeIcon.addEventListener("click", ()=>{
-    searchInput.value = "";
-    searchInput.focus();
-    wrapper.classList.remove("active");
-    infoText.style.color = "#9A9A9A";
-    infoText.innerHTML = "Type any existing word and press enter to get meaning, example, synonyms, etc.";
-});
 
 
 

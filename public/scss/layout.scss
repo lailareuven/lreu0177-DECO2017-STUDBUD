@@ -1,6 +1,7 @@
 
 /*------ flexbox structure https://css-tricks.com/snippets/css/a-guide-to-flexbox/ ------*/
 
+// white border
 .wrapperb {
     display: flex;  
     flex-flow: row wrap;
@@ -26,40 +27,11 @@
     background-color: #B0BD92;
   }
   
-  .bodytext {
-  background-color: #B0BD92;
-  }
-  
-  /* ---------- INTRO ------------ */
-  
-        .intro {
-          background-color: mediumpurple;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-        }
-  
-  /* ---------- MAIN 1 ------------ */
-  
-        // .welcome {
-        //   background-color: #B0BD92;
-        // /*   flex-direction: row; */
-        //   width: 45%;
-        //   text-align:left;
-        //   padding: 20px;
-        // }
-  
-        // .separator {
-        // background-color: #B0BD92;
-        //   width: 10%;
-        // }
   
   /* ---------- STOPWATCH CSS LAYOUT ------------ */
 
         .stopwatchContainer {
-        background-color: #B0BD92;
-        /*   flex-direction: row;
-          flex: 0 0 20vw; */
+          background-color: #B0BD92;
           width: 45%;
           min-height: 250px;
           height: 100%;
@@ -72,47 +44,37 @@
           flex: 1;
           display: flex;
           flex-direction: column;
-          
         }
+
+    /* ----------KANBAN BOARD CSS LAYOUT------------ */
   
-  /* ----------MAIN 4------------ */
-  
-        .reading {
+        .kanbanbox {
           background-color: #B0BD92;
           flex: 1;
           display: flex;
           flex-direction: column;
-        /*   flex-direction: row; */
-          // width: 45%;
         }
   
-        // .separator {
-        // background-color: #B0BD92;
-        //   width: 10%;
-        // }
+  /* ----------DICTIONARY CSS LAYOUT ------------ */
   
-        .pomodoro {
-        background-color: #B0BD92;
-        flex: 1;
+        .dictionary {
+          background-color: #B0BD92;
+          flex: 1;
           display: flex;
           flex-direction: column;
-        /*   flex-direction: row;
-          flex: 0 0 20vw; */
-          // width: 45%;
+        }
+  
+        
+  /* ----------POMODORO TIMER CSS LAYOUT ------------ */
+        .pomodoro {
+          background-color: #B0BD92;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
           min-height: 900px;
           height: 100%;
         }
   
-  /* ----------KANBAN BOARD------------ */
-  
-  .kanbanbox {
-          background-color: #B0BD92;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          // padding-left: 400px;
-          // padding-right: 400px;
-        }
 
   
   main {
